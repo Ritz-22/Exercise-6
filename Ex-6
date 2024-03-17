@@ -1,0 +1,64 @@
+SET 7
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple jQuery Exercise</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <form>
+      <label for="input">Enter text:</label>
+      <input type="text" id="input">
+      <button type="button" id="button">Add Item</button>
+    </form>
+    <ul id="list"></ul>
+    <script>
+      $(document).ready(function() {
+        $("#button").click(function() {
+          var text = $("#input").val();
+          var listItem = "<li>" + text + "</li>";
+          $("#list").append(listItem);
+          $("#input").val("");
+        });
+      });
+    </script>
+  </body>
+</html>
+
+
+QUESTION 2
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count Consonants</title>
+    <!-- Include jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <label for="inputString">Enter a string:</label>
+    <input type="text" id="inputString">
+    <button id="countButton">Count Consonants</button>
+    <div id="result"></div>
+
+    <script>
+        $(document).ready(function(){
+            $("#countButton").click(function(){
+                var inputString = $("#inputString").val().toLowerCase
+                var consonantCount = 0;
+                var consonantRegex = /[bcdfghjklmnpqrstvwxyz]/g;
+                var consonants = inputString.match(consonantRegex); 
+                if (consonants !== null) {
+                    consonantCount = consonants.length;
+                }
+                $("#result").text("Number of consonants: " + consonantCount); 
+            });
+        });
+    </script>
+</body>
+</html>
+
+
